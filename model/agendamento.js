@@ -15,7 +15,7 @@ const Agendamento = connection.define(
             type: Sequelize.TIME,
             allowNull: false
         },
-        medico:{
+        dentista:{
             type: Sequelize.STRING,
             allowNull: false
         },
