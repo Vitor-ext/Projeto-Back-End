@@ -7,9 +7,9 @@ const router = express.Router();  // Instanciando o Express.Router
 
 router.post(
     '/agendamento/cadastrarAgendamento',
-    (req, res) =>{  
+    (req, res)=>{  
 
-        const {cliente, horario, destista} = req.body;
+        const {cliente, horario, dentista} = req.body;
 
         Agendamento.create(
             {
@@ -28,7 +28,7 @@ router.post(
 
 router.get(
     '/agendamento/listarConsultas',
-    (req, res) =>{
+    (req, res)=>{
 
         Agendamento.findAll()
             .then((Agendamento) =>{
@@ -40,7 +40,7 @@ router.get(
 
 router.delete(
     '/agendamento/deletarConsultas/:id',
-    (req, res) =>{
+    (req, res)=>{
 
         const {id} = req.params;
 
@@ -49,7 +49,7 @@ router.delete(
 
                 Agendamento.destroy({
                     where: {id}
-                }) .then(
+                }).then(
                     ()=>{
                         res.send('Agendamento Excluido com Sucesso !');
                     }
@@ -59,3 +59,5 @@ router.delete(
         );
     }
 );
+
+module.exports = router;

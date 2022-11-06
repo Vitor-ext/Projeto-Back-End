@@ -3,7 +3,11 @@ const Sequelize = require('sequelize');
 
 // Importação da conexão com o banco
 
-const connection = require("../database/databese");
+const connection = require("../database/database");
+
+/*Importação da tabela de categoria para criação da chave estrangeira
+representanto a cardinalidade*/
+const Especialidade = require('./especialidade');
 
 const Dentista = connection.define(
     'tbl_dentista',    // Nome da Tabela no Banco de Dados
@@ -33,14 +37,14 @@ const Dentista = connection.define(
 
 
 /*Implementação da  CHAVE ESTRANGEIRA - LADO N*/
-Especialidade.hasmany(Dentista);
+// Especialidade.hasMany(Dentista);
 
 
 /*Implementação da  CHAVE PRIMÁRIA - LADO 1*/
-Dentista.belongsto(Especialidade);
+// Dentista.belongsTo(Especialidade);
 
 
 /*Executar a criação da tabela no Banco de Dados   -   Somente uma vez, após isso comentar essa linha*/
-//Cliente.sync({force:True});
+//Dentista.sync({force:True});
 
-exports.module = Cliente;
+exports.module = Dentista;

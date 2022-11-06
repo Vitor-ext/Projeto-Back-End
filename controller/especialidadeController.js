@@ -38,7 +38,7 @@ router.delete(
                     ()=>{
                         res.send('Dados Excluidos com Sucesso !');
                     }
-                )
+                );
             }
         );
     }
@@ -55,4 +55,6 @@ router.get(
             }
         );
     }
-)
+);
+
+module.exports = router;

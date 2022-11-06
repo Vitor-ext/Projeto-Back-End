@@ -2,7 +2,7 @@
 const Sequelize = require('sequelize'); 
 
 // Importação da conexão com o banco
-const connection = require('../database/databese');
+const connection = require('../database/database');
 
 
 const Especialidade = connection.define(
