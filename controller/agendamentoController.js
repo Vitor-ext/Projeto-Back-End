@@ -1,9 +1,9 @@
 const express = require('express');  // Importanto Express
-const { Where } = require('sequelize/types/utils');
+
+const app = express();
+const router = express.Router();  // Instanciando o Express.Router
 
 const Agendamento = require('../model/agendamento'); 
-
-const router = express.Router();  // Instanciando o Express.Router
 
 router.post(
     '/agendamento/cadastrarAgendamento',
@@ -52,7 +52,7 @@ router.delete(
                 }).then(
                     ()=>{
                         res.send('Agendamento Excluido com Sucesso !');
-                    }
+                    } 
                 );
                 
             }

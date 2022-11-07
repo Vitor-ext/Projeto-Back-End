@@ -45,6 +45,6 @@ const Dentista = connection.define(
 
 
 /*Executar a criação da tabela no Banco de Dados   -   Somente uma vez, após isso comentar essa linha*/
-//Dentista.sync({force:True});
+// Dentista.sync({force:true});
 
 exports.module = Dentista;

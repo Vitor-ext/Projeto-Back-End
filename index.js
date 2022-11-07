@@ -25,19 +25,19 @@ const Especialidade = require('./model/especialidade');
 const agendamentoController = require('./controller/agendamentoController');
 app.use('/', agendamentoController); 
 
-const clienteController = require('./controller/clienteController');
-app.use('/', clienteController);
+// const clienteController = require('./controller/clienteController');
+// // app.use('/', clienteController);
 
-const consultaController = require('./controller/consultaControlle');
-app.use('/', consultaController);
+// const consultaController = require('./controller/consultaControlle');
+// app.use('/', consultaController);
 
-const dentistaController = require('./controller/dentistaController');
-app.use('/', dentistaController);
+// const dentistaController = require('./controller/dentistaController');
+// app.use('/', dentistaController);
 
 const especialidadeController = require('./controller/especialidadeController');
 app.use('/', especialidadeController); 
 
 /*Servidor de requisições da aplicação */
 app.listen(3000, ()=>{
-    console.log('Servidor rodando na porta 3000 - http://localhost3000');
+    console.log('Servidor rodando na porta 3000 - http://localhost:3000/');
 });
