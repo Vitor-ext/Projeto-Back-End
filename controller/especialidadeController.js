@@ -8,15 +8,13 @@ router.post(
     '/especialidade/cadastrarEspecialidade',
     (req, res)=>{
 
-        const especialidade = require.body;
+        const {especialidade} = req.body;
 
         Especialidade.create(
-            {
-                especialidade
-            }
+            {especialidade}
         ).then(
             ()=>{
-                res.send('Dados de Especialidade Inseridos com Sucesso ! ');
+                res.send('ESPECIALIDADE CADASTRADA COM SUCESSO ! ');
             }
         );
     }
@@ -36,7 +34,7 @@ router.delete(
                     where: {id}
                 }).then(
                     ()=>{
-                        res.send('Dados Excluidos com Sucesso !');
+                        res.send('ESPECIALIDADE EXCLUIDA COM SUCESSO !');
                     }
                 );
             }

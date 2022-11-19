@@ -31,4 +31,4 @@ const Cliente = connection.define(
 /*Executar a criação da tabela no Banco de Dados   -   Somente uma vez, após isso comentar essa linha*/
 // Cliente.sync({force:true});
 
-exports.module = Cliente;
+module.exports = Cliente;

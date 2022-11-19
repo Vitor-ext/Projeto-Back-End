@@ -37,14 +37,14 @@ const Dentista = connection.define(
 
 
 /*Implementação da  CHAVE ESTRANGEIRA - LADO N*/
-// Especialidade.hasMany(Dentista);
+Especialidade.hasMany(Dentista);
 
 
 /*Implementação da  CHAVE PRIMÁRIA - LADO 1*/
-// Dentista.belongsTo(Especialidade);
+Dentista.belongsTo(Especialidade);
 
 
 /*Executar a criação da tabela no Banco de Dados   -   Somente uma vez, após isso comentar essa linha*/
-// Dentista.sync({force:true});
+//Dentista.sync({force:true});
 
-exports.module = Dentista;
+module.exports = Dentista;
