@@ -19,7 +19,16 @@ router.post(
             }
         ).then(
             ()=>{
-                res.send('AGENDAMENTO CONFIRMADO COM SUCESSO!');
+                //res.send('AGENDAMENTO CONFIRMADO COM SUCESSO!'); // Maneira Easy
+
+                // Maneira HARD 
+
+                res.json({
+                    Erro:'0',
+                    Message:"AGENDAMENTO CONFIRMADO COM SUCESSO!",
+                    Referencia:'1',
+                    Params:'11540'
+                });
             }
         );
 
@@ -32,7 +41,14 @@ router.get(
 
         Agendamento.findAll()
             .then((Agendamento) =>{
-                res.send(Agendamento)
+                //res.send(Agendamento)
+                res.json({
+                    data: Agendamento,
+                    Erro:'0',
+                    Message:"Agendamento Excluido com Sucesso!",
+                    Referencia:'1',
+                    Params:'11540'
+                });
             }
         );
     }
@@ -51,7 +67,14 @@ router.delete(
                     where: {id}
                 }).then(
                     ()=>{
-                        res.send('Agendamento Excluido com Sucesso !');
+                        //res.send('Agendamento Excluido com Sucesso !');
+
+                        res.json({
+                            Erro:'0',
+                            Message:"Agendamento Excluido com Sucesso!",
+                            Referencia:'1',
+                            Params:'11540'
+                        });
                     } 
                 );
                 

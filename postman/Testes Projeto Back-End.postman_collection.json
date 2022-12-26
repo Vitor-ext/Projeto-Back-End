@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "5f2cb8bd-772a-4895-8d61-999dd1275ce1",
+		"_postman_id": "a8aea93e-021d-4b72-97f8-d8e844498f21",
 		"name": "Testes Projeto Back-End",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -38,7 +38,10 @@
 			"name": "1 - Listar Agendamento",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": ""
+				}
 			},
 			"response": []
 		},
@@ -46,7 +49,10 @@
 			"name": "1 - Deletar Agendamento",
 			"request": {
 				"method": "DELETE",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": ""
+				}
 			},
 			"response": []
 		},
@@ -54,7 +60,28 @@
 			"name": "2 - Cadastrar Especialidade",
 			"request": {
 				"method": "POST",
-				"header": []
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"especialidade\":\"Cirurgião\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/especialidade/cadastrarEspecialidade",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"especialidade",
+						"cadastrarEspecialidade"
+					]
+				}
 			},
 			"response": []
 		},
@@ -62,7 +89,19 @@
 			"name": "2 - Listar Especialidade",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/especialidade/listarEspecialidade",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"especialidade",
+						"listarEspecialidade"
+					]
+				}
 			},
 			"response": []
 		},
@@ -70,7 +109,10 @@
 			"name": "2 - Deletar Especialidade",
 			"request": {
 				"method": "DELETE",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": ""
+				}
 			},
 			"response": []
 		}

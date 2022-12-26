@@ -22,7 +22,14 @@ router.post(
             }
         ).then(
             ()=>{
-                res.send('DENTISTA CADASTRADO COM SUCESSO!');
+                //res.send('DENTISTA CADASTRADO COM SUCESSO!');
+
+                res.json({
+                    Erro:'0',
+                    Message:"DENTISTA CADASTRADO COM SUCESSO!",
+                    Referencia:'1',
+                    Params:'11540'
+                });
             }
         );
 
@@ -35,7 +42,15 @@ router.get(
 
         Dentista.findAll()
             .then((Dentista) =>{
-                res.send(Dentista)
+                //res.send(Dentista)
+                res.json({
+                    data: Dentista,
+                    Erro:'0',
+                    Message:"DENTISTA EXCLUIDO COM SUCESSO !",
+                    Referencia:'1',
+                    Params:'11540'
+                });
+
             }
         );
     }
@@ -54,7 +69,14 @@ router.delete(
                     where: {id}
                 }).then(
                     ()=>{
-                        res.send('DENTISTA EXCLUIDO COM SUCESSO !');
+                        //res.send('DENTISTA EXCLUIDO COM SUCESSO !');
+
+                        res.json({
+                            Erro:'0',
+                            Message:"DENTISTA EXCLUIDO COM SUCESSO !",
+                            Referencia:'1',
+                            Params:'11540'
+                        });
                     } 
                 );
                 

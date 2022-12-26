@@ -14,7 +14,14 @@ router.post(
             {especialidade}
         ).then(
             ()=>{
-                res.send('ESPECIALIDADE CADASTRADA COM SUCESSO ! ');
+                //res.send('ESPECIALIDADE CADASTRADA COM SUCESSO ! ');
+
+                res.json({
+                    Erro:'0',
+                    Message:"ESPECIALIDADE CADASTRADA COM SUCESSO !",
+                    Referencia:'1',
+                    Params:'11540'
+                });
             }
         );
     }
@@ -34,7 +41,14 @@ router.delete(
                     where: {id}
                 }).then(
                     ()=>{
-                        res.send('ESPECIALIDADE EXCLUIDA COM SUCESSO !');
+                        //res.send('ESPECIALIDADE EXCLUIDA COM SUCESSO !');
+
+                        res.json({
+                            Erro:'0',
+                            Message:"ESPECIALIDADE EXCLUIDA COM SUCESSO !",
+                            Referencia:'1',
+                            Params:'11540'
+                        });
                     }
                 );
             }
@@ -49,7 +63,15 @@ router.get(
 
         Especialidade.findAll()
             .then((Especialidade)=>{
-                res.send(Especialidade);
+                //res.send(Especialidade);
+
+                res.json({
+                    data: Especialidade,
+                    Erro:'0',
+                    Message:"Lista de Especialidades existentes!",
+                    Referencia:'1',
+                    Params:'11540'
+                });
             }
         );
     }

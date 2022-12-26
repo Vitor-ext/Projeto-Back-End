@@ -12,14 +12,6 @@ app.use(express.urlencoded({extended:true}));
 
 const connection = require('./database/database');
 
-/* Importar Models */
-const Agendamento = require('./model/agendamento');
-const Cliente = require('./model/cliente');
-const Consulta = require('./model/consulta');
-const Dentista = require('./model/dentista');
-const Especialidade = require('./model/especialidade');
-
-
 /* Importar Rotas */
 
 const agendamentoController = require('./controller/agendamentoController');

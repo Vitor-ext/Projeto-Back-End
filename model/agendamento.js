@@ -24,6 +24,6 @@ const Agendamento = connection.define(
 );
 
 /*Executar a criação da tabela no Banco de Dados   -   Somente uma vez, após isso comentar essa linha*/
-// Agendamento.sync({force:true});
+Agendamento.sync({force:true});
 
 module.exports = Agendamento;

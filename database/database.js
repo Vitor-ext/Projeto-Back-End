@@ -15,7 +15,7 @@ Parametros
 const connection = new sequelize(
     'Projeto_Final',
     'root',
-    '',
+    'bcd127',
     {
         host: 'localhost',
         dialect: 'mysql',

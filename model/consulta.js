@@ -33,6 +33,6 @@ const Consulta = connection.define(
 
 
 /*Executar a criação da tabela no Banco de Dados   -   Somente uma vez, após isso comentar essa linha*/
-// Consulta.sync({force:true});
+//Consulta.sync({force:true});
 
 exports.module = Consulta;

@@ -20,7 +20,15 @@ router.post(
             }
         ).then(
             ()=>{
-                res.send('CLIENTE CADASTRADO COM SUCESSO!');
+                //res.send('CLIENTE CADASTRADO COM SUCESSO!');
+
+                res.json({
+                    Erro:'0',
+                    Message:"CLIENTE CADASTRADO COM SUCESSO!",
+                    Referencia:'1',
+                    Params:'11540'
+                });
+                
             }
         );
 
@@ -33,7 +41,14 @@ router.get(
 
         Cliente.findAll()
             .then((Cliente) =>{
-                res.send(Cliente)
+                //res.send(Cliente)
+                res.json({
+                    data: Cliente,
+                    Erro:'0',
+                    Message:"CLIENTE CADASTRADO COM SUCESSO!",
+                    Referencia:'1',
+                    Params:'11540'
+                });
             }
         );
     }
@@ -52,7 +67,14 @@ router.delete(
                     where: {id}
                 }).then(
                     ()=>{
-                        res.send('CLIENTE EXCLUIDO COM SUCESSO !');
+                        //res.send('CLIENTE EXCLUIDO COM SUCESSO !');
+
+                        res.json({
+                            Erro:'0',
+                            Message:"CLIENTE EXCLUIDO COM SUCESSO!",
+                            Referencia:'1',
+                            Params:'11540'
+                        });
                     } 
                 );
                 
